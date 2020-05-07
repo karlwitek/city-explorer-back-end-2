@@ -11,3 +11,15 @@ function mungeLocation(locationData) {
         return {};
     }
 }
+
+
+
+function mungeWeather(weatherData) {
+    return weatherData.map(item => {
+        object.forecast = item.weather.description;
+        object.time = item.datetime;
+       
+    });
+}
+
+module.exports = { mungeLocation, mungeWeather };

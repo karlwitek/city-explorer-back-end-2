@@ -1,6 +1,8 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 const { mungeLocation } = require('../utils.js');
+const data = require('../data/geoData.json');
+
 
 
 const test = QUnit.test;
@@ -18,7 +20,7 @@ test('time to test mungeLocation function', function(assert) {
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const results = mungeLocation();
+    const results = mungeLocation(data);
 
     //Assert
     // Make assertions about what is expected valid result
